@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms</title>
+</head>
+
+<body>
+  <form action="">
+    <label for="firstname">Name</label>
+    <input type="text" name="firstname" id="firstname">
+
+    <br>
+    <label for="lastname">Last Name</label>
+    <input type="text" name="lastname" id="lastname">
+
+    <br>
+    <label for="age">Age</label>
+    <input type="number" name="age" id="age" min="25" max="60">
+
+    <br>
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" placeholder="Hello@gmail.com">
+
+    <br>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password">
+
+    <br>
+    <p>Select your stream:</p>
+    <input type="radio" name="stream" id="science">
+    <label for="science">Science</label>
+    <input type="radio" name="stream" id="commerce">
+    <label for="commerce">Commerce</label>
+    <input type="radio" name="stream" id="art">
+    <label for="art">Art</label>
+    
+    <br>
+    <label for="course">Select your course</label>
+    <select name="course" id="course">
+      <option value="">Btech</option>
+      <option value="">BCA</option>
+      <option value="">MCA</option>
+      <option value="">Mtech</option>
+    </select>
+
+    
+    <br>
+    <input type="checkbox" name="policy" id="policy" >
+    <label for="policy">I agree all the policies of this from</label>
+
+    <br>
+    <label for="color">Select your color</label>
+    <input type="color" name="color" id="color">
+
+    <br>
+    <label for="date">Enter your DOB</label>
+    <input type="date" name="date" id="date">
+
+    <br>
+    <label for="photo">Enter your profile photo</label>
+    <input type="file" name="photo" id="photo">
+    
+    <br>
+    <label for="message">Enter about yourself</label>
+    <br>
+    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+    <br>
+    <input type="submit" value="Submit">
+    <input type="reset">
+
+
+  </form>
+</body>
+
+</html>
