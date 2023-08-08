@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid CSS Properties</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: 100px 100px 100px;
+            background-color: rgb(247, 200, 113);
+            padding: 10px;
+            gap: 5px;
+        }
+
+        .grid-items {
+            border: 2px solid rgb(226, 92, 92);
+            text-align: center;
+            padding-top: 35px;
+            font-size: 1.5rem;
+            font-weight: bold
+        }
+
+        #box-1 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+
+        #box-2 {
+            grid-row-start: 2;
+            grid-row-end: 4;
+            padding-top: 80px;
+        }
+
+        #box-7 {
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-items" id="box-1">Header</div>
+        <div class="grid-items" id="box-2">Menu</div>
+        <div class="grid-items box-3">Main</div>
+        <div class="grid-items box-4">Right</div>
+        <!-- <div class="grid-items box-5">5</div>
+        <div class="grid-items box-6">6</div> -->
+        <div class="grid-items" id="box-7">Footer</div>
+        <!-- <div class="grid-items box-8">8</div>
+        <div class="grid-items box-9">9</div> -->
+    </div>
+</body>
+
+</html>
