@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid CSS-02 Properties</title>
+    <style>
+        .wrapper {
+            border: 2px solid orange;
+            border-radius: 4px;
+            background-color: antiquewhite;
+            max-width: 940px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            grid-template-rows: 100px 100px 100px;
+            grid-template-areas:
+                "hd hd hd hd hd hd hd hd hd"
+                "sb sb sb main main main main main main"
+                "ft ft ft ft ft ft ft ft ft";
+        }
+
+        .header {
+            grid-area: hd;
+            border: 2px solid rgb(240, 208, 147);
+            text-align: center;
+            color: red;
+            font-size: 1.5rem;
+        }
+
+        .Sidebar {
+            grid-area: sb;
+            border: 2px solid rgb(240, 208, 147);
+            text-align: center;
+            color: red;
+            font-size: 1.5rem;
+        }
+
+        .Content {
+            grid-area: main;
+            border: 2px solid rgb(240, 208, 147);
+            text-align: center;
+            color: red;
+            font-size: 1.5rem;
+        }
+
+        .Footer {
+            grid-area: ft;
+            border: 2px solid rgb(240, 208, 147);
+            text-align: center;
+            color: red;
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="header">Header</div>
+        <div class="Sidebar">Sidebar</div>
+        <div class="Content">Content</div>
+        <div class="Footer">Footer</div>
+    </div>
+</body>
+
+</html>
