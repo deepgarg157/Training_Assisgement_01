@@ -28,12 +28,6 @@ div.navbar-items {
     line-height: normal;
 }
 
-.search-1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 63px;
-}
 
 .navbar-hamburger {
     width: 67px;
@@ -50,16 +44,18 @@ div.navbar-items {
 .social-logo {
     display: flex;
     flex-direction: column;
+    position: fixed;
+    right: 0px;
 }
 
 .para-1 {
     border-radius: 20px;
     border: 6px solid #FFF;
     background: #E5D8FF;
-    width: 972px;
+    width: 976px;
     height: 507px;
     color: #6F7373;
-    margin: 162px 34px 137px 49px;
+    margin: 162px 100px 137px 49px;
 }
 
 .image-1 {
@@ -234,10 +230,14 @@ div.navbar-items {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 200px;
 }
 
 .search-2 input {
-    border-radius: 20px;
-    font-size: 15px;
+    border: none;
+    font-size: 10px;
     padding: 10px;
 }
