@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Coding with Deepanshu garg</h1>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+
+const h1Element=document.querySelector('h1')
+
+document.querySelector('#stop').addEventListener('click', function(){
+    clearInterval(done)
+    console.log("Stopped clicked");
+})
+
+const ChangeMe=function(){
+    h1Element.innerHTML='chnages done'
+    console.log('chnage done');
+}
+
+const done=setTimeout(ChangeMe,2000)
+
+</script>
+
+</html>
