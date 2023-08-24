@@ -8,22 +8,27 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
-        <style>
-            .current-topic{
-                text-decoration: underline;
-                font-weight: bold;
-            }
+    <style>
+        .current-topic {
+            text-decoration: underline;
+            font-weight: bold;
+        }
 
-            .dark{
-                background-color: black;
-                color: white;
-            }
+        .dark {
+            background-color: black;
+            color: white;
+        }
 
-            .btn{
-                color: white;
-                background-color: rgb(127, 99, 236);
-            }
-        </style>
+        .btn {
+            color: white;
+            background-color: rgb(127, 99, 236);
+            margin: 2px;
+        }
+
+        li{
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
@@ -37,87 +42,102 @@
     </div>
     <div>
         <button class="btn">Target button</button>
+        <br>
+        <button class="btn" id="TogglePageButton">Toggle Button</button>
     </div>
 
     <script>
+        window.addEventListener('load', function () {
+            let h1Element = document.getElementById('h1-primary')
+            console.log(h1Element);
+            h1Element.style.border = '2px solid black'
+            h1Element.style.color = 'green'
 
-        let h1Element = document.getElementById('h1-primary')
-        console.log(h1Element);
-        h1Element.style.border = '2px solid black'
-        h1Element.style.color = 'green'
-
-        let pElements = document.getElementsByTagName('p')
-        for (let pElement of pElements) {
-            pElement.style.color = 'red'
-        }
-
-        let pCustomDiv = document.getElementsByClassName('custom-bg')
-        for (let element of pCustomDiv) {
-            element.style.backgroundColor = 'yellow'
-            // element.style.color='red'
-        }
-
-        let pElementInDiv = document.querySelectorAll('div p')
-        for (let element of pElementInDiv) {
-            element.style.fontWeight = 'bold'
-        }
-
-        let pSpecial = document.querySelector('div>p')
-        // pSpecial.style.textDecoration='underline'
-
-        let pSpecial1 = document.querySelector('div>p:not(div.custom-bg>p)')
-        pSpecial1.style.textDecoration = 'underline'
-
-
-
-        // Creating New Element
-
-        let topics = [
-            'Intro to DOM',
-            'Getting the Elements',
-            'Querying the elements',
-            'creating the elements',
-            'Removing element',
-            'modifying element',
-            'working with attributes',
-            'DOM events bases',
-            'Common DOM events'
-        ]
-
-        let currentTopicIndex = 5
-
-        let olElement = document.createElement('ol')
-        // document.body.appendChild(olElement)
-        const scriptElement = document.querySelector('script')
-        // document.body.insertBefore(olElement, scriptElement)
-
-        topics.forEach(function(text, index) {
-            let li = document.createElement('li')
-            li.innerHTML = text
-
-            li.setAttribute('class-index', index)
-
-            if (index < currentTopicIndex) {
-                li.classList.add('text-info')
+            let pElements = document.getElementsByTagName('p')
+            for (let pElement of pElements) {
+                pElement.style.color = 'red'
             }
-            else if (index > currentTopicIndex) {
-                li.classList.add('text-danger')
+
+            let pCustomDiv = document.getElementsByClassName('custom-bg')
+            for (let element of pCustomDiv) {
+                element.style.backgroundColor = 'yellow'
+                // element.style.color='red'
             }
-            else {
-                li.classList.add('text-warning', 'current-topic')
+
+            let pElementInDiv = document.querySelectorAll('div p')
+            for (let element of pElementInDiv) {
+                element.style.fontWeight = 'bold'
             }
-            olElement.appendChild(li)
+
+            let pSpecial = document.querySelector('div>p')
+            // pSpecial.style.textDecoration='underline'
+
+            let pSpecial1 = document.querySelector('div>p:not(div.custom-bg>p)')
+            pSpecial1.style.textDecoration = 'underline'
+
+
+
+            // Creating New Element
+
+            let topics = [
+                'Intro to DOM',
+                'Getting the Elements',
+                'Querying the elements',
+                'creating the elements',
+                'Removing element',
+                'modifying element',
+                'working with attributes',
+                'DOM events bases',
+                'Events object and delegation',
+                'Common DOM events'
+            ]
+
+            let currentTopicIndex = 5
+
+            let olElement = document.createElement('ol')
+            // document.body.appendChild(olElement)
+            const scriptElement = document.querySelector('script')
+            // document.body.insertBefore(olElement, scriptElement)
+
+            topics.forEach(function (text, index) {
+                let li = document.createElement('li')
+                li.innerHTML = text
+
+                li.setAttribute('class-index', index)
+
+                if (index < currentTopicIndex) {
+                    li.classList.add('text-info')
+                }
+                else if (index > currentTopicIndex) {
+                    li.classList.add('text-danger')
+                }
+                else {
+                    li.classList.add('text-warning', 'current-topic')
+                }
+                olElement.appendChild(li)
+
+            })
+            // let lastLi=olElement.removeChild(olElement.lastChild)
+
+            //    This is very important DOM how to set a new element at any place inside the body
+            h1Element.insertAdjacentElement('afterend', olElement)
+
+            document.querySelector('.text-warning').classList.replace('text-warning', 'text-success')
+
+            document.body.classList.add('dark')
 
         })
-        // let lastLi=olElement.removeChild(olElement.lastChild)
 
-        //    This is very important DOM how to set a new element at any place inside the body
-        h1Element.insertAdjacentElement('afterend', olElement)
+        // Events
 
-        document.querySelector('.text-warning').classList.replace('text-warning', 'text-success')
+        window.addEventListener('load', function(){
+            console.log('asdf');
+        })
 
-        document.body.classList.add('dark')
-
+        document.getElementById('TogglePageButton').addEventListener('click', function(){
+            document.body.style.backgroundColor='gray'
+        })
+            
 
 
 
@@ -125,5 +145,8 @@
 
     </script>
 </body>
-
 </html>
+
+
+
+
