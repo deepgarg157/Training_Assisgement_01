@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+    <h1 id="h1-primary">There are going to Learn DOM Manipulation</h1>
+    <p>This is some content in the paragraph</p>
+    <div class="custom-bg">
+        <p>This is a some context in the div</p>
+        <div>
+            <p>This is the another context in the secondary div</p>
+        </div>
+    </div>
+    <div>
+        <button class="btn">Target button</button>
+    </div>
+
+    <script>
+
+        let h1Element = document.getElementById('h1-primary')
+        console.log(h1Element);
+        h1Element.style.border = '2px solid black'
+        h1Element.style.color = 'green'
+
+        let pElements = document.getElementsByTagName('p')
+        for (let pElement of pElements) {
+            pElement.style.color = 'red'
+        }
+
+        let pCustomDiv = document.getElementsByClassName('custom-bg')
+        for (let element of pCustomDiv) {
+            element.style.backgroundColor = 'yellow'
+            // element.style.color='red'
+        }
+
+        let pElementInDiv = document.querySelectorAll('div p')
+        for (let element of pElementInDiv) {
+            element.style.fontWeight = 'bold'
+        }
+
+        let pSpecial = document.querySelector('div>p')
+        // pSpecial.style.textDecoration='underline'
+
+        let pSpecial1 = document.querySelector('div>p:not(div.custom-bg>p)')
+        pSpecial1.style.textDecoration = 'underline'
+
+
+
+        // Creating New Element
+
+        let topics=[
+            'Intro to DOM',
+            'Getting the Elements',
+            'Querying the elements',
+            'creating the elements'
+        ]
+
+        let olElement = document.createElement('ol')
+        // document.body.appendChild(olElement)
+        const scriptElement = document.querySelector('script')
+        // document.body.insertBefore(olElement, scriptElement)
+
+        topics.forEach(function texts(text){
+            let li=document.createElement('li')
+            li.innerHTML=text
+            olElement.appendChild(li)
+        })
+
+
+
+
+        h1Element.insertAdjacentElement('afterend', olElement)
+
+
+
+
+    </script>
+</body>
+
+</html>
