@@ -22,10 +22,15 @@
 
     <script>
 
-        const h1Element = document.getElementById('h1-primary')
+        let h1Element = document.getElementById('h1-primary')
         console.log(h1Element);
         h1Element.style.border = '2px solid black'
         h1Element.style.color = 'green'
+
+       let pElements=document.getElementsByTagName('p')
+       for (let pElement of pElements) {
+        pElement.style.color='red'
+       }
 
 
 
