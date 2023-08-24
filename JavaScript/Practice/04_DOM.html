@@ -10,7 +10,7 @@
 <body>
     <h1 id="h1-primary">There are going to Learn DOM Manipulation</h1>
     <p>This is some content in the paragraph</p>
-    <div>
+    <div class="custom-bg">
         <p>This is a some context in the div</p>
         <div>
             <p>This is the another context in the secondary div</p>
@@ -27,12 +27,17 @@
         h1Element.style.border = '2px solid black'
         h1Element.style.color = 'green'
 
-       let pElements=document.getElementsByTagName('p')
-       for (let pElement of pElements) {
-        pElement.style.color='red'
-       }
+        let pElements = document.getElementsByTagName('p')
+        for (let pElement of pElements) {
+            pElement.style.color = 'red'
+        }
 
-
+        let custom = document.getElementsByClassName('custom-bg')
+        for (let element of custom) {
+            element.style.backgroundColor='yellow'
+            // element.style.color='red'
+        }
+        
 
     </script>
 </body>
