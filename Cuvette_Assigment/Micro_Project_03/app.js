@@ -321,12 +321,30 @@ let foodOriginalData = [
     }
 ]
 
-console.log(foodOriginalData);
+// console.log(foodOriginalData);
 
 function listAllFoodItems() {
     for (let index = 0; index < foodOriginalData.length; index++) {
+        console.log('list all the food items');
         console.log(foodOriginalData[index]);
     }
 }
 
 listAllFoodItems();
+
+
+function listFoodVegetables() {
+    let Vegetable = foodOriginalData.filter(({ category }) => category === 'Vegetable')
+    console.log('list all the food items with category vegetables');
+    console.log(Vegetable);
+}
+
+listFoodVegetables();
+
+function listFoodFruit() {
+    let fruit = foodOriginalData.filter(({ category }) => category === 'Fruit')
+    console.log('list all the food items with category fruit');
+    console.log(fruit);
+}
+
+listFoodFruit();
