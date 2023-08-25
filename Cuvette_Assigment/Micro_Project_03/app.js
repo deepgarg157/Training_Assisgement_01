@@ -348,3 +348,44 @@ function listFoodFruit() {
 }
 
 listFoodFruit();
+
+function listFoodProtien() {
+    let protien = foodOriginalData.filter(({ category }) => category === 'Protein')
+    console.log('list all the food items with category protien');
+    console.log(protien);
+}
+
+listFoodProtien();
+
+function listFoodNuts() {
+    let nuts = foodOriginalData.filter(({ category }) => category === 'Nuts')
+    console.log('list all the food items with category nuts');
+    console.log(nuts);
+}
+
+listFoodNuts();
+
+function listFoodGrains() {
+    let grain = foodOriginalData.filter(({ category }) => category === 'Grain')
+    console.log('list all the food items with category grains');
+    console.log(grain);
+}
+
+listFoodGrains();
+
+function listFoodDairy() {
+    let dairy = foodOriginalData.filter(({ category }) => category === 'Dairy')
+    console.log('list all the food items with category dairy');
+    console.log(dairy);
+}
+
+listFoodDairy();
+
+//  list all the food items with calorie above 100
+function listFoodCalorieAbove() {
+    let CalorieAbove  = foodOriginalData.filter(({ calorie }) => calorie > 100)
+    console.log('list all the food items with calorie above 100');
+    console.log(CalorieAbove);
+}
+
+listFoodCalorieAbove();
