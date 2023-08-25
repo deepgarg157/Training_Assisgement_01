@@ -389,3 +389,36 @@ function listFoodCalorieAbove() {
 }
 
 listFoodCalorieAbove();
+
+//  list all the food items with calorie below 100
+function listFoodCalorieBelow() {
+    let CalorieBelow  = foodOriginalData.filter(({ calorie }) => calorie < 100)
+    console.log('list all the food items with calorie below 100');
+    console.log(CalorieBelow);
+}
+
+listFoodCalorieBelow();
+
+//  list all the food items with highest protien content to lowest
+function listFoodProtienHightoLow() {
+    let ProtienHightoLow  = foodOriginalData.sort((a, b)=>{
+        return b.protiens - a.protiens
+    })
+
+    console.log('list all the food items with highest protien content to lowest');
+    console.log(ProtienHightoLow);
+}
+
+listFoodProtienHightoLow();
+
+//  list all the food items with lowest cab content to highest
+function listFoodCabLowtoHigh() {
+    let CabLowtoHigh  = foodOriginalData.sort((a, b)=>{
+        return a.cab - b.cab
+    })
+
+    console.log('list all the food items with lowest cab content to highest');
+    console.log(CabLowtoHigh);
+}
+
+listFoodCabLowtoHigh();
