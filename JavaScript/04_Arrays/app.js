@@ -26,6 +26,7 @@ console.log(numbers);
 
 // Shopping List
 
+// object of array
 let list = [
     { text: 'milk', cost: 4, need: false },
     { text: 'bread', cost: 14, need: true },
@@ -37,14 +38,28 @@ let list = [
 let html = ''
 let total = 0
 
-for (let index = 0; index < list.length; index++) {
-    console.log(list[index]);
-    if (list[index].need) {
-        html += `<li>${list[index].text}</li>`
-        total += list[index].cost
-        console.log(total);
-    }
+// for loop condtion
+// for (let index = 0; index < list.length; index++) {
+//     console.log(list[index]);
+//     if (list[index].need) {
+//         html += `<li>${list[index].text}</li>`
+//         total += list[index].cost
+//         console.log(total);
+//     }
 
+// }
+
+// while loop conditon
+
+let index=0
+let item
+while(item =list[index++]){
+    if (item.need) {
+                html += `<li>${item.text}</li>`
+                total += item.cost
+                console.log(total);
+            }
+            
 }
 
 document.getElementById('list').innerHTML = html
