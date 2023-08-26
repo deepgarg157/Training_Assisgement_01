@@ -81,7 +81,7 @@ const drinkWater = setInterval(function () {
 // setTimeOut function
 
 const timerID = setTimeout(function () {
-    console.log('First Task');
+    // console.log('First Task');
     clearTimeout(timerID)
 }, 5000)
 // setTimeout(function (){
@@ -91,4 +91,24 @@ const timerID = setTimeout(function () {
 //     console.log('third Task');
 // },3000)
 
+// Using high order function format how to use function
+let radius = [1, 3, 5, 7]
 
+const area=function(radius){
+    return (Math.PI*radius*radius)
+}
+
+const circumference=function(radius){
+    return (2*Math.PI*radius)
+}
+
+const calculate=function(radius, logic){
+    const output=[]
+    for(let i=0; i<radius.length; i++){
+        output.push(logic(radius[i]))
+    }
+    return output
+}
+
+console.log(calculate(radius, area))
+console.log(calculate(radius, circumference))
