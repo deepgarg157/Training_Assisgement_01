@@ -36,14 +36,37 @@ function calculateFunction(fn, x, y){
 
 // console.log('divide >', calculateFunction(divide, 2, 2));
 
-
+// Call Back Function
 function deliveryProduct(name, callback){
-    console.log('done the delivery of the', name );
+    // console.log('done the delivery of the', name );
     callback()
 }
 
 function callBack(){
-    console.log('Successfully delivered the product');
+    // console.log('Successfully delivered the product');
 }
 
 deliveryProduct('HP laptop', callBack)
+
+
+// 1. returning function
+
+function multiple7(){
+    return function(x){
+        return x*7
+    }
+}
+
+const fn=multiple7()
+console.log(fn(5));
+
+// 2. returning function
+
+function sum(x){
+    return function(y){
+        return x+y
+    }
+}
+
+console.log(sum(1)(2))
+
