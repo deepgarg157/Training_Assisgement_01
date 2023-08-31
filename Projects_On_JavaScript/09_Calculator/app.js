@@ -8,7 +8,7 @@ Array.from(buttons).forEach((button) => {
       string = eval(string);
       inputs.value = string;
     }
-    else if (e.target.innerHTML == 'AC') {
+    else if (e.target.innerHTML == 'RESET') {
       string = ''
       inputs.value = string;
     }
