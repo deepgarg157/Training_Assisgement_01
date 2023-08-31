@@ -402,8 +402,13 @@ listFoodCalorieBelow();
 //  list all the food items with highest protien content to lowest
 function listFoodProtienHightoLow() {
     let ProtienHightoLow  = foodOriginalData.sort((a, b)=>{
-        return b.protiens - a.protiens
+        if( b.protiens > a.protiens){
+            return -1
+        } 
+        return 1
     })
+        
+    
 
     console.log('list all the food items with highest protien content to lowest');
     console.log(ProtienHightoLow);
