@@ -1,11 +1,26 @@
-const colorChange=()=>{
-    const randomNumber=Math.floor(Math.random()*16777215)
-    const randomCode='#' + randomNumber.toString(16)
-    document.body.style.background=randomCode
-    document.getElementById('color-code').innerText=randomCode
+let string = ""
+let buttons = document.querySelectorAll('.btn')
+let displayValue = document.getElementById('display')
 
-}
+Array.from(buttons).forEach((button) => {
+    button.addEventListener('click', function (e) {
+        if (e.target.innerHTML == '=') {
+            string = eval(string)
+            displayValue.value = string
+        }
 
-document.getElementById('btn').addEventListener('click', colorChange)
+        else if (e.target.innerHTML == 'RES') {
+            string = ""
+            displayValue.value = string
+        } else if (e.target.innerHTML == 'DEL') {
+            string = string.substring(0, string.length - 1)
+            displayValue.value = string
+        }
+        else {
+            string = string + e.target.innerHTML
+            displayValue.value = string
+            console.log(e.target);
 
-colorChange()
+        }
+    })
+})  
