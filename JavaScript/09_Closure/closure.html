@@ -20,24 +20,33 @@
     // }
     // outer()
 
-    document.getElementById('gray').addEventListener('click', function(){
-        document.body.style.backgroundColor='gray'
-    })
+    // document.getElementById('gray').addEventListener('click', function(){
+    //     document.body.style.backgroundColor='gray'
+    // })
 
-    document.getElementById('green').addEventListener('click', function(){
-        document.body.style.backgroundColor='green'
-    })
+    // document.getElementById('green').addEventListener('click', function(){
+    //     document.body.style.backgroundColor='green'
+    // })
 
-    function outer(){
-        let name='deep'
-        function inner(x, y){
-            console.log(name);
-            return x+y
+    // function outer(){
+    //     let name='deep'
+    //     function inner(x, y){
+    //         console.log(name);
+    //         return x+y
             
-        }
-        console.log(inner(3,4))
+    //     }
+    //     console.log(inner(3,4))
+    // }
+
+    // outer()
+
+    function clickHandler(color){
+        document.body.style.backgroundColor=`${color}`
+        return function(){
+                document.body.style.backgroundColor = `${color}`
+            }
     }
 
-    outer()
+    document.getElementById('gray').addEventListener('click', clickHandler('gray'))
 </script>
 </html>
