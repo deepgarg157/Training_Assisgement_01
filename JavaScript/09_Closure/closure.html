@@ -40,13 +40,24 @@
 
     // outer()
 
-    function clickHandler(color){
-        document.body.style.backgroundColor=`${color}`
-        return function(){
-                document.body.style.backgroundColor = `${color}`
-            }
+    // function clickHandler(color){
+    //     document.body.style.backgroundColor=`${color}`
+    //     return function(){
+    //             document.body.style.backgroundColor = `${color}`
+    //         }
+    // }
+
+    // document.getElementById('gray').addEventListener('click', clickHandler('gray'))
+
+    function makeFunc() {
+        const name = "Mozilla";
+        function displayName() {
+            console.log(name);
+        }
+        return displayName;
     }
 
-    document.getElementById('gray').addEventListener('click', clickHandler('gray'))
+    const fn=makeFunc();
+    fn()
 </script>
 </html>
