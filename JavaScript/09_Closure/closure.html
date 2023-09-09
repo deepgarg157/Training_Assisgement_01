@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+<body>
+    <h1>closure</h1>
+    <button id="gray">Gray</button>
+    <button id="green">Green</button>
+</body>
+<script>
+    // function outer(){
+    //     let name='deep'
+    //     function inner(){
+    //         console.log(`name: ${name}`);
+    //     }
+    //     inner()
+    // }
+    // outer()
+
+    document.getElementById('gray').addEventListener('click', function(){
+        document.body.style.backgroundColor='gray'
+    })
+
+    document.getElementById('green').addEventListener('click', function(){
+        document.body.style.backgroundColor='green'
+    })
+
+    function outer(){
+        let name='deep'
+        function inner(x, y){
+            console.log(name);
+            return x+y
+            
+        }
+        console.log(inner(3,4))
+    }
+
+    outer()
+</script>
+</html>
