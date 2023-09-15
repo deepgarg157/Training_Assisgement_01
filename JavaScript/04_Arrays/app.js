@@ -135,4 +135,21 @@ console.log(arrayList.lastIndexOf('biscuit'));
 
 console.log(arrayList.findIndex((item)=>item.text === 'bread'));
 
+let output=[]
+let count=1
 
+// function fizzBuzz(){
+
+// if(output % 3===0){
+//     output.push('fizz');
+// }else{
+//     output.push(count)
+
+// }
+output.push(count)
+count++
+// }
+
+// fizzBuzz()
+
+console.log(output);
