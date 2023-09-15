@@ -5,6 +5,8 @@ const rock_div = document.getElementById('r')
 const paper_div = document.getElementById('p')
 const scissors_div = document.getElementById('s')
 const reset = document.getElementById('reset')
+const rules= document.getElementById('rule')
+const cross=document.querySelector('.cross')
 
 let score;
 if(localStorage.getItem("score")){
@@ -24,7 +26,7 @@ function win(userChoice, computerChoice) {
     localStorage.setItem("score",JSON.stringify(score))
     userScore_span.innerHTML=score.userScore
     computerScore_span.innerHTML=score.computerScore
-    result_div.innerHTML=`User ${userChoice} beats computer ${computerChoice} the WIN!!`
+    // result_div.innerHTML=`User ${userChoice} beats computer ${computerChoice} the WIN!!`
 }
 
 function lose(userChoice, computerChoice) {
@@ -32,11 +34,11 @@ function lose(userChoice, computerChoice) {
     localStorage.setItem("score",JSON.stringify(score))
     userScore_span.innerHTML=score.userScore
     computerScore_span.innerHTML=score.computerScore
-    result_div.innerHTML=`User ${userChoice} Lose computer ${computerChoice} the LOSE!!`
+    // result_div.innerHTML=`User ${userChoice} Lose computer ${computerChoice} the LOSE!!`
 }
 
 function draw(userChoice, computerChoice) {
-    result_div.innerHTML=`User ${userChoice} Draw computer ${computerChoice} the DRAW!!`
+    // result_div.innerHTML=`User ${userChoice} Draw computer ${computerChoice} the DRAW!!`
 }
 function getComputerChoice() {
     const choice = ['r', 'p', 's']
@@ -46,6 +48,8 @@ function getComputerChoice() {
 
 function game(userChoice) {
     const computerChoice = getComputerChoice()
+    console.log(userChoice);
+    console.log(computerChoice);
     switch (userChoice + computerChoice) {
         case 'rs':
         case 'pr':
@@ -55,6 +59,7 @@ function game(userChoice) {
         case 'rp':
         case 'sr':
         case 'pr':
+        case 'ps':
             lose(userChoice, computerChoice)
             break;
         case 'rr':
@@ -78,13 +83,20 @@ function main() {
         game('s')
     })
 
+    rules.addEventListener('click', function(){
+        document.querySelector('.rules-container').style.display=null
+    })
+
+    cross.addEventListener('click', function(){
+        document.querySelector('.rules-container').style.display='none'
+    })
+
     reset.addEventListener('click',()=>{
         score.userScore=0
         score.computerScore=0
         localStorage.setItem("score",JSON.stringify(score))
         userScore_span.innerHTML=score.userScore
         computerScore_span.innerHTML=score.computerScore
-        result_div.innerHTML=""
     })
 }
 
