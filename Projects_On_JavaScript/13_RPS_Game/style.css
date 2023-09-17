@@ -6,6 +6,7 @@
 
 body {
     font-family: 'Ubuntu', sans-serif;
+    position: relative;
 }
 
 .wrapper {
@@ -173,4 +174,88 @@ body {
     border: 2px solid white;
     color: white;
     transform: translate3d(0px, -2px, 0px);
+}
+
+.rules{
+    position: absolute;
+    top: 300px;
+    right: 70px;
+    border: 7px solid white;
+    border-radius: 15px;
+    background: #004429;
+    color: white;
+    display: none;
+}
+
+.rules:hover{
+    transform: translate3d(0px, -2px, 0px);
+    transition: all 0.25s;
+}
+
+.rules .cross img{
+    border: 5px solid white;
+    border-radius: 50%;
+    background: red;
+    padding: 9px;
+    float: right;
+    top: -25px;
+    right: -25px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.rules .game-rule{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin: 20px;
+}
+
+.rule-btn{
+    position: absolute;
+    top: 650px;
+    right: 70px;
+    width: 119px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid white;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
+
+.rule-btn:hover{
+    transform: translate3d(0px, -5px, 0px);
+    background-color: white;
+    color: gray;
+}
+
+
+.rule-1, .rule-2, .rule-3, .rule-4{
+    display: flex;
+    padding: 3px;
+}
+
+.rule-1 div, .rule-2 div, .rule-3 div, .rule-4 div{
+    width: 10px;
+    height: 10px;
+    background-color: yellow;
+    margin: 10px;
+}
+
+.rules .rule-container{
+    padding: 13px;
+}
+
+.user-hand{
+    border: 30px solid #2E9A2563;
+    border-radius: 400px;
+}
+
+.computer-hand{
+    border: 30px solid #2E9A2563;
+    border-radius: 400px;
 }
