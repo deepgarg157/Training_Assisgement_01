@@ -53,7 +53,7 @@ const pickComputerHand = (hand) => {
 
 // conditions
 const referee = (userhand, computerhand) => {
-  document.querySelector('.next-btn').style.display=null
+  document.querySelector('.next-btn').style.display = null
   if (userhand == 'rock' && computerhand == 'scissors') {
     decision('YOU WIN AGAINST PC')
     setScore(score.userScore + 1)
@@ -61,7 +61,10 @@ const referee = (userhand, computerhand) => {
     document.querySelector('.computer-winner').classList.remove('computer-hand')
     localStorage.setItem("score", JSON.stringify(score))
     document.querySelector(".newGame").innerHTML = 'PLAY AGAIN'
-    document.querySelector('.next-btn').style.display='flex'
+    if (score.userScore > score.computerScore) {
+      document.querySelector('.next-btn').style.display = 'flex'
+    }
+
 
   }
   else if (userhand == 'paper' && computerhand == 'rock') {
@@ -71,7 +74,9 @@ const referee = (userhand, computerhand) => {
     document.querySelector('.computer-winner').classList.remove('computer-hand')
     localStorage.setItem("score", JSON.stringify(score))
     document.querySelector(".newGame").innerHTML = 'PLAY AGAIN'
-    document.querySelector('.next-btn').style.display='flex'
+    if (score.userScore > score.computerScore) {
+      document.querySelector('.next-btn').style.display = 'flex'
+    }
   }
   else if (userhand == 'scissors' && computerhand == 'paper') {
     decision('YOU WIN AGAINST PC')
@@ -80,7 +85,9 @@ const referee = (userhand, computerhand) => {
     document.querySelector('.computer-winner').classList.remove('computer-hand')
     localStorage.setItem("score", JSON.stringify(score))
     document.querySelector(".newGame").innerHTML = 'PLAY AGAIN'
-    document.querySelector('.next-btn').style.display='flex'
+    if (score.userScore > score.computerScore) {
+      document.querySelector('.next-btn').style.display = 'flex'
+    }
   }
   else if (userhand == 'rock' && computerhand == 'paper') {
     decision('YOU LOST AGAINST PC')
@@ -149,22 +156,22 @@ const restartGame = () => {
   let hands = document.querySelector(".hands");
   hands.style.display = "flex";
 
-  document.querySelector('.won-game').style.display='none'
-  document.querySelector('.scoreboard').style.display='flex'
+  document.querySelector('.won-game').style.display = 'none'
+  document.querySelector('.scoreboard').style.display = 'flex'
 }
 
-const rulesContainer=()=>{
-   document.querySelector('.rules').style.display='block'
+const rulesContainer = () => {
+  document.querySelector('.rules').style.display = 'block'
 }
 
-const crossClick=()=>{
-  document.querySelector('.rules').style.display='none'
+const crossClick = () => {
+  document.querySelector('.rules').style.display = 'none'
 }
 
-const hurryPage=()=>{
-  document.querySelector('.won-game').style.display='flex'
-  document.querySelector('.contest').style.display='none'
-  document.querySelector('.scoreboard').style.display='none'
-  document.querySelector('.hands').style.display='none'
-  document.querySelector('.next-btn').style.display=null
+const hurryPage = () => {
+  document.querySelector('.won-game').style.display = 'flex'
+  document.querySelector('.contest').style.display = 'none'
+  document.querySelector('.scoreboard').style.display = 'none'
+  document.querySelector('.hands').style.display = 'none'
+  document.querySelector('.next-btn').style.display = null
 }
