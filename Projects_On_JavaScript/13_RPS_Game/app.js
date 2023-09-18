@@ -41,7 +41,7 @@ const pickUserHand = (hand) => {
 const pickComputerHand = (hand) => {
 
   const hands = ['rock', 'paper', 'scissors'];
-  const computerhand = hands[Math.floor(Math.random() * 3)]
+  const computerhand = hands[Math.floor(Math.random() * hands.length)]
 
   // set the computer pick
 
