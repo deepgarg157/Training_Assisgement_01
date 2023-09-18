@@ -215,7 +215,7 @@ body {
 .rule-btn{
     position: absolute;
     top: 650px;
-    right: 70px;
+    right: 200px;
     width: 119px;
     height: 40px;
     display: flex;
@@ -227,11 +227,33 @@ body {
     cursor: pointer;
 }
 
+.next-btn{
+        position: absolute;
+        top: 650px;
+        right: 70px;
+        width: 119px;
+        height: 40px;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid white;
+        border-radius: 10px;
+        color: white;
+        cursor: pointer;
+}
+
 .rule-btn:hover{
     transform: translate3d(0px, -5px, 0px);
     background-color: white;
     color: gray;
 }
+
+.next-btn:hover{
+    transform: translate3d(0px, -5px, 0px);
+    background-color: white;
+    color: gray;
+}
+
 
 
 .rule-1, .rule-2, .rule-3, .rule-4{
@@ -258,4 +280,31 @@ body {
 .computer-hand{
     border: 30px solid #2E9A2563;
     border-radius: 400px;
+}
+
+.won-game{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.won-game .won-game-heading{
+    font-size: 91px;
+    color: black;
+    position: absolute;
+    top: 330px;
+    color: white;
+}
+
+.won-game .won-game-sub-heading{
+    font-size: 31px;
+    position: absolute;
+    top: 450px;
+    color: white;
+}
+
+.won-game .newGame{
+    position: absolute;
+    top: 550px;
 }
