@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Lobster&family=Roboto+Serif:opsz,wght@8..144,600&family=Ubuntu:ital,wght@0,300;0,400;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="scoreboard">
+            <div class="title">
+                <img src="./assets/title.png" alt="title">
+            </div>
+            <div id="computer-score">
+                <div class="computer-score">
+                    <p>COMPUTER <br>SCORE</p>
+                    <h1>0</h1>
+                </div>
+            </div>
+
+            <div class="your-score">
+                <p>YOUR <br> SCORE</p>
+                <h1>0</h1>
+            </div>
+        </div>
+
+        <div class="hands">
+            <div class="rock hand">
+                <img src="./assets/Rock.png" alt="Rock" onclick="pickUserHand('rock')">
+            </div>
+            <div class="paper hand">
+                <img src="./assets/Paper.png" alt="Paper" onclick="pickUserHand('paper')">
+            </div>
+            <div class="scissors hand">
+                <img src="./assets/Scissors.png" alt="Scissors" onclick="pickUserHand('scissors')">
+            </div>
+        </div>
+
+        <div class="contest">
+            <div class="userhand">
+                <h1>YOU PICKED</h1>
+                <div class="handImageContainer user-winner">
+                    <img id="userPickImage" src="./assets/Paper.png" alt="">
+                </div>
+            </div>
+
+            <div class="referee">
+                <div class="decision">
+                    <h1>YOU WIN</h1>
+                </div>
+                <div class="newGame" onclick="restartGame()">
+                    PLAY AGAIN
+                </div>
+            </div>
+
+            <div class="computerhand">
+                <h1>PC PICKED</h1>
+                <div class="handImageContainer computer-winner">
+                    <img id="computerPickImage" src="./assets/Scissors.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <section class="won-game">
+            <img src="./assets/Group 5.png" alt="stars" id="stars" style="position: relative;">
+            <img src="./assets/Vector (1).png" alt="VectorTrophy" id="trophy" style="position: absolute; top: 100px;">
+            <h2 class="won-game-heading">HURRAY!!</h2>
+            <h6 class="won-game-sub-heading">YOU WON THE GAME</h6>
+            <div class="newGame" onclick="restartGame()">
+                PLAY AGAIN
+            </div>
+          </section>
+
+        <div class="rules">
+            <div class="cross" onclick="crossClick()">
+                <img src="./assets/X.png" alt="">
+            </div>
+            <div class="rule-container">
+                <div class="game-rule">
+                    <p>Game Rules</p>
+                </div>
+                <div class="rule-1">
+                    <div></div>
+                    <p>Rock beats scissors, scissors beat <br>paper, and paper beats rock.</p>
+                </div>
+                <div class="rule-2">
+                    <div></div>
+                    <p>Agree ahead of time whether you’ll <br> count off “rock, paper, scissors, <br> shoot” or just
+                        “rock, paper, scissors.”</p>
+                </div>
+                <div class="rule-3">
+                    <div></div>
+                    <p>Use rock, paper, scissors to settle <br>minor decisions or simply play to <br> pass the
+                        time</p>
+                </div>
+                <div class="rule-4">
+                    <div></div>
+                    <p>If both players lay down the same <br>hand, each player lays down another <br> hand</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="rule-btn" onclick="rulesContainer()">
+            RULES
+        </div>
+
+        <div class="next-btn" onclick="hurryPage()">
+            NEXT
+        </div>
+
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
