@@ -1,0 +1,234 @@
+.head{
+    width: 100%;
+    height: 10%;
+    background-color: rgb(32, 100, 32);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+#book{
+    color: greenyellow;
+    text-decoration:underline;
+    cursor: pointer;
+}
+.about{
+    width: 50%;
+    text-align: center;
+  
+}
+.contact{
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 2%;
+}
+.vertical-line {
+    border-left: 2px solid white;
+    height: 3vh; 
+  }
+.logo-search-login{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+.logo{
+    display: flex;
+    width: 50%;
+}
+#comName{
+    font-family: cursive;
+}
+.logo span{
+    margin-top: 20px;
+    text-align: center;
+}
+.search-login{
+    width: 50%;
+    display: flex;
+}
+.search{
+    width: 60%;
+    height: 30px;
+}
+#input{
+    border-radius: 5px;
+    width: 60%;
+    height: 30px;
+    background-image: url('./image/search.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 20px 20px;
+}
+
+#login{
+    width: 20%;
+    text-align: center;
+    position: relative;
+}
+
+#logo-text{
+    position: absolute;
+    top: 30%;
+    left: 38%;
+    right: 40%;
+    font-size: 15px;
+
+}
+#noOfOrder{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: -22px;
+    right:-7px;
+    background-color: green;
+    color: white;
+    text-align: center;
+}
+#cart{
+    width: 20%;
+    text-align: center;
+    position: relative;
+}
+#cart-text{
+    position: absolute;
+    top: 30%;
+    left: 38%;
+    right: 40%;
+    font-size: 15px;
+}
+.items{
+   display: flex; 
+   justify-content:space-evenly;
+   list-style-type:  none;;
+}
+#order{
+    background-color: rgb(32, 100, 32);
+    width:8%;
+    height: 26px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#heading{
+    margin-left: 50px;
+    font-size: 50px;
+    font-family: 'Onest', sans-serif;
+}
+.footer{ 
+
+    background-image: url('./image/girl.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-image: 100%;
+}
+.yellow{
+  display: flex;
+  width: 40%;
+}
+
+#yellowPic{
+    height: 80px;
+    margin: 30px 0px 50px 50px;
+    color: grey;
+}
+.orange{
+    display: flex;
+    width: 40%;
+}
+#orangePic{
+    height: 80px;
+    margin: 30px 0px 50px 50px;
+}
+.blue{
+    display: flex;
+    width: 40%;
+}
+#bluePic{
+    height: 80px;
+    margin: 30px 0px 50px 50px;
+}
+.content{
+    margin-left: 30px;
+    color: grey;
+    font-family: 'Onest', sans-serif;
+}
+#getStartedNow{
+    margin: 30px 0px 50px 50px;
+    color: white;
+    width: 15%;
+    height: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    background-color: rgb(32, 100, 32);
+    box-shadow: 5px 5px 10px black ;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 517px )
+{ 
+    .contact{
+        display: block;
+        margin-right: 0%;
+    } 
+    .vertical-line {
+        border-left: 0px solid white;
+        height: 0vh; 
+      }  
+      .items{
+        display: block; 
+     }
+     .logo-search-login{
+        display: block;
+     }
+     #mail{
+        font-size: small;
+     }
+     #or{
+        font-size: smaller;
+        margin: 3px;
+     }
+     #get{
+        font-size: smaller;
+        margin-left: 4px;
+     }
+
+     .content{
+        color: black;
+     }
+    
+     #login{
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+     }
+     #cart{
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+     }
+     #noOfOrder{
+        display: none;
+     }
+     .footer{ 
+        background-image: url('photos/girlPhone.jpg');
+     } 
+     .logo-search-login{
+        width: 100%;
+     }
+     #input{
+        background-image: none;
+     }
+     .logo{
+        display: flex;
+        width: 20%;
+        margin-bottom: 20px;
+    }
+
+}
+
