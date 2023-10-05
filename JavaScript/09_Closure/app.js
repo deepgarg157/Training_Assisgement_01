@@ -72,6 +72,7 @@
     // console.log(typeof z);
     // z()
 
+    // Closure function 
     function x(){
         var a=7;
         function y(){
@@ -82,12 +83,36 @@
 
     x();
 
-    const grayColor=document.getElementById('gray')
-    grayColor.addEventListener('click', function(){
-        document.body.style.backgroundColor="gray"
-    })
+    // const grayColor=document.getElementById('gray')
+    // grayColor.addEventListener('click', function(){
+    //     document.body.style.backgroundColor="gray"
+    // })
 
-    const greenColor=document.getElementById('green')
-    greenColor.addEventListener('click', function(){
-        document.body.style.backgroundColor="green"
-    })
+    // const greenColor=document.getElementById('green')
+    // greenColor.addEventListener('click', function(){
+    //     document.body.style.backgroundColor="green"
+    // })
+     
+
+    function x(){
+        for(let i=1; i<=5; i++){
+            setTimeout(function (){
+                  console.log(i);
+            },i*1000)
+        }
+    }
+    x();
+
+
+
+    function y(){
+        for(var i=1; i<=5; i++){
+            function close(a){
+                setTimeout(function(){
+                    console.log(a);
+                }, a*1000)
+            }
+            close(i)
+        }
+    }
+    y();
