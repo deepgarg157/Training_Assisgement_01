@@ -8,85 +8,10 @@
 </head>
 
 <body>
-    <h1>closure</h1>
+    <h1>Java Script closure function</h1>
     <button id="gray">Gray</button>
     <button id="green">Green</button>
+
+    <script src="./app.js"></script>
 </body>
-<script>
-    // function outer(){
-    //     let name='deep'
-    //     function inner(){
-    //         console.log(`name: ${name}`);
-    //     }
-    //     inner()
-    // }
-    // outer()
-
-    // document.getElementById('gray').addEventListener('click', function(){
-    //     document.body.style.backgroundColor='gray'
-    // })
-
-    // document.getElementById('green').addEventListener('click', function(){
-    //     document.body.style.backgroundColor='green'
-    // })
-
-    // function outer(){
-    //     let name='deep'
-    //     function inner(x, y){
-    //         console.log(name);
-    //         return x+y
-
-    //     }
-    //     console.log(inner(3,4))
-    // }
-
-    // outer()
-
-    // function clickHandler(color){
-    //     document.body.style.backgroundColor=`${color}`
-    //     return function(){
-    //             document.body.style.backgroundColor = `${color}`
-    //         }
-    // }
-
-    // document.getElementById('gray').addEventListener('click', clickHandler('gray'))
-
-    // function makeFunc() {
-    //     const name = "Mozilla";
-    //     function displayName() {
-    //         console.log(name);
-    //     }
-    //     return displayName;
-    // }
-
-    // const fn=makeFunc();
-    // fn()
-
-    var n = 8
-    function square(num) {
-        let ans = num * num
-        return ans
-    }
-
-    const output = square(5)
-    const output1 = square(n)
-    console.log(output);
-    console.log(output1);
-
-    function x(){
-        var a=7;
-        function y(){
-            console.log(a);
-        }
-
-        return y
-    }
-
-    const z= x()
-    console.log(z);
-    console.log(typeof z);
-    z()
-
-</script>
-
 </html>
