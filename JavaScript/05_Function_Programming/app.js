@@ -32,16 +32,41 @@
 
 // console.log(output);
 
-const prices=[1000, 100, 1500, 150, 2000, 2500, 3000]
+const prices = [1000, 100, 1500, 150, 2000, 2500, 3000]
 
-const newPrices=prices.sort(function(a, b){
-    if(a<b){
+const newPrices = prices.sort(function (a, b) {
+    if (a < b) {
         return -1
     }
-    if(a>b){
+    if (a > b) {
         return 1
     }
     return 0
 })
 
 console.log(newPrices);
+
+
+
+
+// This is called the function programming
+const radius = [2, 3, 5, 7, 9]
+
+const area = function (radius) {
+    return Math.PI * radius * radius
+}
+
+const circumference= function (radius){
+    return Math.PI*2*radius;
+}
+
+const calculate = function (radius, logic) {
+    let output = []
+    for (let i = 0; i < radius.length; i++) {
+        output.push(logic(radius[i]))
+    }
+    return output
+}
+
+console.log(calculate(radius, area));
+console.log(calculate(radius, circumference))
