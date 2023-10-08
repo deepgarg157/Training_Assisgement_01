@@ -23,14 +23,14 @@ form.addEventListener("submit", (e) => {
     let phone = e.target.phone.value;
     
 
-    localStorage.setItem("userInfo", JSON.stringify(userDetail))
-    let userDetail = JSON.parse(localStorage.getItem("userInfo") ?? []);
+    let userDetail = JSON.parse(localStorage.getItem("userInfo")) ?? [];
     userDetail = ({
         userName: name,
         userEmail: email,
         userPhone: phone
     })
-    console.log(userDetail);
+    localStorage.setItem("userInfo", JSON.stringify(userDetail))
+
 
 
 })
