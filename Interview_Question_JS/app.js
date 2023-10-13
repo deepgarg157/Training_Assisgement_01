@@ -100,3 +100,59 @@ console.log(strUpperCase("deepanshu bhai kaise ho"))
 
 // 10. write a JavaScript function to get the number of occurrences of each letter in specified string
 
+function occStr(str){
+      var occurrences={}
+      str.split("").forEach(function(item){
+        if(occurrences.hasOwnProperty(item) === false){
+            occurrences[item]=1;
+        }else{
+            occurrences[item]++;
+        }
+    })
+    return occurrences
+
+}
+
+console.log(occStr("apple"))
+
+// 11. Loops, loop an array and add all members of it
+
+let arr = [1,2,3,4,5,6]
+
+let newArr=arr.reduce((acc, currentVal)=> acc+currentVal , 0)
+
+console.log(newArr)
+
+// 12. in an array of numbers and strings, only add those members which are not strings
+
+let arr2= [123, "deep", "deepanshu", "ankit", 4, 5, "aayush"]
+
+var sum=0
+
+arr2.forEach(function(elem){
+    if(typeof elem === 'number'){
+        sum = sum + elem
+    }
+})
+
+console.log(sum)
+
+// 13. loop an array of objects and remove all objects which don't have gender's value male
+
+var arrObj= [
+    {
+        name:"Deep", gender:"male"
+    },
+    {
+        name:"akanshi", gender:"female"
+    },
+    {
+        name:"deepanshu", gender:"male"
+    },
+    {
+        name:"ankit", gender:"male"
+    },
+]
+
+var newArray=arrObj.filter((item)=>item.gender ==='male')
+console.log(newArray)
