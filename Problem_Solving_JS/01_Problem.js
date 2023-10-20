@@ -61,26 +61,26 @@ console.log(newArray);
 // Write a JavaScript program to calculate the factorial of a given number. 
 
 // take input from the user
-const number = parseInt(prompt('Enter a positive integer: '));
+// const number = parseInt(prompt('Enter a positive integer: '));
 
 // checking if number is negative
-if (number < 0) {
-    console.log('Error! Factorial for negative number does not exist.');
-}
+// if (number < 0) {
+//     console.log('Error! Factorial for negative number does not exist.');
+// }
 
 // if number is 0
-else if (number === 0) {
-    console.log(`The factorial of ${number} is 1.`);
-}
+// else if (number === 0) {
+//     console.log(`The factorial of ${number} is 1.`);
+// }
 
 // if number is positive
-else {
-    let fact = 1;
-    for (i = 1; i <= number; i++) {
-        fact *= i;
-    }
-    console.log(`The factorial of ${number} is ${fact}.`);
-}
+// else {
+//     let fact = 1;
+//     for (i = 1; i <= number; i++) {
+//         fact *= i;
+//     }
+//     console.log(`The factorial of ${number} is ${fact}.`);
+// }
 
 
 
@@ -88,36 +88,36 @@ else {
 // program to check if a number is prime or not
 
 // take input from the user
-const number1 = parseInt(prompt("Enter a positive number: "));
-let isPrime = true;
+// const number1 = parseInt(prompt("Enter a positive number: "));
+// let isPrime = true;
 
 // check if number is equal to 1
-if (number1 === 1) {
-    console.log("1 is neither prime nor composite number.");
-}
+// if (number1 === 1) {
+//     console.log("1 is neither prime nor composite number.");
+// }
 
-// check if number is greater than 1
-else if (number1 > 1) {
+// // check if number is greater than 1
+// else if (number1 > 1) {
 
-    // looping through 2 to number-1
-    for (let i = 2; i < number1; i++) {
-        if (number1 % i == 0) {
-            isPrime = false;
-            break;
-        }
-    }
+//     // looping through 2 to number-1
+//     for (let i = 2; i < number1; i++) {
+//         if (number1 % i == 0) {
+//             isPrime = false;
+//             break;
+//         }
+//     }
 
-    if (isPrime) {
-        console.log(`${number1} is a prime number`);
-    } else {
-        console.log(`${number1} is a not prime number`);
-    }
-}
+//     if (isPrime) {
+//         console.log(`${number1} is a prime number`);
+//     } else {
+//         console.log(`${number1} is a not prime number`);
+//     }
+// }
 
 // check if number is less than 1
-else {
-    console.log("The number is not a prime number.");
-}
+// else {
+//     console.log("The number is not a prime number.");
+// }
 
 
 
@@ -138,3 +138,9 @@ function sentenceCase(str) {
 }
  
 console.log(sentenceCase('geeks for geeks'));
+
+// an array n the spread object
+const arr2 = [1,2,3,4]
+const obj = {...arr2}
+
+console.log(obj)
