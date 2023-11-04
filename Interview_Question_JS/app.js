@@ -222,4 +222,23 @@ function retive(arr, n=1){
 
 retive([1,2,3,4,5], 1)
 
-// 17. 
+// 17. output 
+
+for(var i=0; i<10 ; i++){
+    setTimeout(()=>{
+        console.log(i)
+    },1000)
+}
+
+// output : 10
+
+// 18. 
+
+for(let i=0;i<10;i++){
+    setTimeout(()=>{
+        console.log(i)
+    },1000)
+}
+
+// output: 0,1,2,3,4,5,6,7,8,9
+
