@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&q=80&w=2069&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+@media (max-width:850px) {
+    body{
+        background-image: url(https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&q=80&w=2069&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 50vh;
+    }
+}
+
+@media (max-width:412px) {
+    body{
+        background-image: url(https://images.unsplash.com/photo-1593079831268-3381b0db4a77?auto=format&fit=crop&q=80&w=2069&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+}
+
+.header{
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+ul{
+    display: flex;
+    color: white;
+    gap: 40px;
+    list-style: none;
+    font-size: 20px;
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+ul li{
+    cursor: pointer;
+}
+
+
+@media (max-width:750px) {
+    ul{
+       flex-wrap: wrap;
+       justify-content: center;
+       padding: 15px;
+    }
+}
+
+.line{
+    position: absolute;
+    right: 470px;
+    width: 4px;
+    height: 40px;
+    background-color: orangered;
+}
+
+.context{
+    position: absolute;
+    top: 300px;
+    left: 850px;
+}
+
+.context h1{
+    color: white;
+}
+
+.context h1:nth-child(3){
+    font-size: 60px;
+    color: orangered;
+}
+
+span{
+    color: white;
+}
+
+.context div h1{
+    font-size: 60px;
+}
+
+@media (max-width:412px) {
+    .context{
+        position: absolute;
+        top: 300px;
+        left: 20px;
+    }
+}
