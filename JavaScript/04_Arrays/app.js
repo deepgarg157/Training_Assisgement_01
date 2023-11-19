@@ -153,3 +153,10 @@ count++
 // fizzBuzz()
 
 console.log(output);
+
+
+const newArray = [
+    ["deep" , 'Deepanshu', 27]
+]
+
+console.log(newArray[0].length)
