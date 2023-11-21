@@ -6,6 +6,8 @@
 // console.log("hey 3");
 // console.log("hey 4");
 
+// ================================================================
+
 // async in java script is that run all the task once, and which one is complete first it give response 
 // example
 
@@ -15,6 +17,9 @@
 //     console.log("hey 3");
 // },3000)
 // console.log("hey 4")
+
+// ================================================================
+
 
 // java script is a sync 
 
@@ -38,6 +43,8 @@ promiseOne.then(()=>{
 
 // output - resolve
 
+// ================================================================
+
 
 const promiseTwo = new Promise(function(resolve, reject){
     var n=Math.floor(Math.random()*10 +1);
@@ -57,6 +64,8 @@ promiseTwo.then(()=>{
 })
 
 // output - number is below than 5
+// ================================================================
+
 
 // this is promise chaning
 // sbse pehle ghar pr aao
@@ -93,6 +102,9 @@ ans4.then(function(data){
     console.log(data)
 })
 
+// ================================================================
+
+
 
 // aysnc await in java script
 
@@ -103,3 +115,48 @@ async function abcd(){
 }
 
 abcd()
+
+// ================================================================
+
+// const checkPromise = new Promise(function (resolve, reject) {
+//     setTimeout(() => {
+//         var a = true
+//         if (a) {
+//             return resolve()
+//         }
+//         else {
+//             return reject()
+//         }
+//     }, 3000)
+
+// })
+
+// checkPromise.then(() => {
+//     console.log("resolved the promise")
+// })
+//     .catch(() => {
+//         console.log("reject the promise")
+//     })
+
+// ========================================================
+
+const checkNumber = new Promise((resolve, reject)=>{
+    let number = Math.floor(Math.random()*10+1)
+    console.log(number)
+    if(number<=5){
+        return resolve()
+    }
+    else{
+        return reject()
+    }
+})
+
+checkNumber.then(()=>{
+    console.log("number is less than or equal to 5")
+})
+.catch(()=>{
+    console.log("number is greater than 5")
+})
+
+// ========================================================
+
