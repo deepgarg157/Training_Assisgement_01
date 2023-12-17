@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: bisque;
+}
+
+.main-container{
+    text-align: center;
+}
+
+.main-container h1{
+    margin:10px 0;
+}
+
+.main-container p{
+    margin:10px 0;
+    font-size: 1.5rem;
+}
+
+.game{
+    width: 20%;
+    margin:auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.boxes{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    margin: 1px 1px;
+    font-size: 3.5rem;
+    background-color:rgb(208, 243, 231);
+    color: black;
+}
+
+.reset-btn{
+    margin: 10px;
+    padding: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.winner{
+    display: none;
+}
