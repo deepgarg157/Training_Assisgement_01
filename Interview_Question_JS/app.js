@@ -275,3 +275,47 @@ const addSum = function (a, b, c) {
 const store1 = addSum(1, 2, 3)
 console.log(store1.getSumOfTwo())
 console.log(store1.getSumOfThree())
+
+
+// Rest and Spread operator
+
+// rest example
+function addSum1(a, b, c, ...others) {
+    console.log(others)
+    console.log(a + b + c + others[0] + others[1])
+}
+
+addSum1(1, 2, 3, 4, 5)
+
+// spread operator in array
+
+var arr3 = ['deep', 'deepanshu', 'yash', 'rahul']
+
+console.log(arr3)
+console.log(...arr3)
+console.log([...arr3, 'ankit'])
+console.log(arr3)
+
+// rest and spread in object
+
+const obj1 = {
+    name:'deep',
+    age:27,
+    email:'deep123@gmail.com'
+}
+
+const {name, ...rest} = obj1
+
+console.log(rest)
+
+
+// call, apply, bind
+function obj2(){
+   console.log(`hello ${this.name}`)
+}
+
+const call = {
+    name:'deepanshu'
+}
+
+obj1().call(call)
