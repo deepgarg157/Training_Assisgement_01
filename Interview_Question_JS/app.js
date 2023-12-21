@@ -210,35 +210,68 @@ console.log(typeTeller(function () { }))
 
 // 16.  write the java script function to get the first element of an array , passing a parameters 'n' will return the first 'n' elements of the array...
 
-function retive(arr, n=1){
-    if(n<=arr.length){
-        for(var i=0; i<n; i++){
+function retive(arr, n = 1) {
+    if (n <= arr.length) {
+        for (var i = 0; i < n; i++) {
             console.log(arr[i])
         }
-    }else{
+    } else {
         console.log(n + " " + "element of array length jada hai")
     }
 }
 
-retive([1,2,3,4,5], 1)
+retive([1, 2, 3, 4, 5], 1)
 
 // 17. output 
 
-for(var i=0; i<10 ; i++){
-    setTimeout(()=>{
+for (var i = 0; i < 10; i++) {
+    setTimeout(() => {
         console.log(i)
-    },1000)
+    }, 1000)
 }
 
 // output : 10
 
 // 18. 
 
-for(let i=0;i<10;i++){
-    setTimeout(()=>{
+for (let i = 0; i < 10; i++) {
+    setTimeout(() => {
         console.log(i)
-    },1000)
+    }, 1000)
 }
 
 // output: 0,1,2,3,4,5,6,7,8,9
 
+// 19. Closure problem 
+
+const sum = function (a) {
+    console.log('hello closure', a)
+
+    var b = 4
+    return function (c) {
+        return a + b + c;
+    }
+}
+
+const store = sum(7)
+console.log(store(2))
+
+
+// 2. problem in closure function
+
+const addSum = function (a, b, c) {
+    console.log(a + b + c)
+
+    return {
+        getSumOfTwo: function () {
+            return a + b
+        },
+        getSumOfThree: function () {
+            return a + b + c
+        }
+    }
+}
+
+const store1 = addSum(1, 2, 3)
+console.log(store1.getSumOfTwo())
+console.log(store1.getSumOfThree())
