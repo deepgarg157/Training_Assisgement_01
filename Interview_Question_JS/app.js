@@ -318,4 +318,4 @@ const call = {
     name:'deepanshu'
 }
 
-obj1().call(call)
+obj2.call(call)
