@@ -75,11 +75,11 @@ let total = 0
 //     }
 // })
 
-list.forEach(({text}) => {
+list.forEach(({ text }) => {
     // if (need) {
-        html += `<li>${text}</li>`
-        // total += cost
-        console.log(total);
+    html += `<li>${text}</li>`
+    // total += cost
+    console.log(total);
     // }
 })
 
@@ -101,11 +101,11 @@ list.forEach(({text}) => {
 
 // console.log(AA);
 
-list.sort((a, b)=>{
-      if(a.cost == b.cost) return 0;
-      if(a.cost > b.cost) return -1;
-    
-      return 1;
+list.sort((a, b) => {
+    if (a.cost == b.cost) return 0;
+    if (a.cost > b.cost) return -1;
+
+    return 1;
 })
 
 // 0, a === b, there is no chnages
@@ -120,23 +120,23 @@ document.getElementById('list').innerHTML = html
 
 // Searching & finding the index of the array
 
-let arrayList=[
+let arrayList = [
     'milk',
     'bacon',
     'bread',
     'butter',
     'biscuit',
-    {text: 'bread', cost: 34}
+    { text: 'bread', cost: 34 }
 ]
 
 console.log(arrayList.indexOf('butter'));
 
 console.log(arrayList.lastIndexOf('biscuit'));
 
-console.log(arrayList.findIndex((item)=>item.text === 'bread'));
+console.log(arrayList.findIndex((item) => item.text === 'bread'));
 
-let output=[]
-let count=1
+let output = []
+let count = 1
 
 // function fizzBuzz(){
 
@@ -156,7 +156,14 @@ console.log(output);
 
 
 const newArray = [
-    ["deep" , 'Deepanshu', 27]
+    ["deep", 'Deepanshu', 27]
 ]
 
 console.log(newArray[0].length)
+
+
+// slice and splice
+
+const list1 = [1, 2, 3, 4, 5, 6]
+console.log(list1.slice(0, 2))  // [1, 2]
+console.log(list1.splice(2, 4)) // [3, 4, 5, 6]
