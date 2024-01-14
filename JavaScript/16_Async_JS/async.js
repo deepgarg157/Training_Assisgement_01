@@ -163,47 +163,81 @@
 
 // Async problem 
 
-const userData = [
-    { name: 'Deep', age: 27, Destination: "software engineer" },
-    { name: 'Akanshi', age: 25, Destination: "layout engineer" }
-]
+// const userData = [
+//     { name: 'Deep', age: 27, Destination: "software engineer" },
+//     { name: 'Akanshi', age: 25, Destination: "layout engineer" }
+// ]
 
-function getData() {
+// function getData() {
 
-    setTimeout(() => {
-        let output = ""
-        userData.forEach((data) => {
-            output += `<li>${data.name}</li>`
-        })
-        document.body.innerHTML = output
-    }, 1000)
+//     setTimeout(() => {
+//         let output = ""
+//         userData.forEach((data) => {
+//             output += `<li>${data.name}</li>`
+//         })
+//         document.body.innerHTML = output
+//     }, 1000)
 
-}
+// }
 
-function createData(newData) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            userData.push(newData)
-            const error = false
-            if (!error) {
-             resolve()
-            }
-            else {
-             reject('error')
-            }
-            
-        }, 2000)
+// function createData(newData) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             userData.push(newData)
+//             const error = false
+//             if (!error) {
+//              resolve()
+//             }
+//             else {
+//              reject('error')
+//             }
 
-    })
+//         }, 2000)
+
+//     })
 
 
-}
+// }
 
-async function start(){
-await createData({ name: 'Akanshi Deepanshu', age: 26, Destination: "Software engineer" })
-getData()
-}
+// async function start(){
+// await createData({ name: 'Akanshi Deepanshu', age: 26, Destination: "Software engineer" })
+// getData()
+// }
 
-start()
+// start()
 
 // createData({ name: 'Akanshi Deepanshu', age: 26, Destination: "Software engineer" }).then(getData).catch((data)=> console.log(data))
+
+
+// Promise and async await concept
+
+const p1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('promise is resolved 1')
+    }, 5000)
+})
+
+const p2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve('promise is resolved 2')
+    }, 10000)
+})
+
+async function handlePromise() {
+    try {
+        console.log('Hello promise')
+        // p.then((res) => console.log(res))
+        // .catch((error) => console.log(error))
+        const response1 = await p1
+        console.log('Hello world')
+        console.log(response1)
+
+        const response2 = await p2
+        console.log('Hello world')
+        console.log(response2)
+    } catch (error) {
+        console.log(error.message)
+    }
+
+}
+handlePromise()
