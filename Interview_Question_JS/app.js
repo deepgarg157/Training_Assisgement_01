@@ -334,3 +334,12 @@ const convert = arrObj.reduce((acc, currVal) => {
 console.log(convert)
 
 // output {1: 1, 2: 2, 3: 3, 4: 4, 5: 5}
+
+// spread concept in object
+
+const obj3 = {
+    name:'deepanshu',
+    age:27
+}
+console.log({...obj3 , 'email':'deep@gmail.com'})
+console.log(obj3) // dont change in the original object through spread operation method use......
