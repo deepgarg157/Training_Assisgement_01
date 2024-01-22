@@ -299,23 +299,38 @@ console.log(arr3)
 // rest and spread in object
 
 const obj1 = {
-    name:'deep',
-    age:27,
-    email:'deep123@gmail.com'
+    name: 'deep',
+    age: 27,
+    email: 'deep123@gmail.com'
 }
 
-const {name, ...rest} = obj1
+const { name, ...rest } = obj1
 
 console.log(rest)
 
 
 // call, apply, bind
-function obj2(){
-   console.log(`hello ${this.name}`)
+function obj2() {
+    console.log(`hello ${this.name}`)
 }
 
 const call = {
-    name:'deepanshu'
+    name: 'deepanshu'
 }
 
 obj2.call(call)
+
+
+// convert Array into Object
+
+const arrObj = [1, 2, 3, 4, 5]
+
+const convert = arrObj.reduce((acc, currVal) => {
+    const result = { ...acc, [currVal]: currVal }
+    return result
+
+},{})
+
+console.log(convert)
+
+// output {1: 1, 2: 2, 3: 3, 4: 4, 5: 5}
