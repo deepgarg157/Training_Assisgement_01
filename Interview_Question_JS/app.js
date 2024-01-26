@@ -329,7 +329,7 @@ const convert = arrObj.reduce((acc, currVal) => {
     const result = { ...acc, [currVal]: currVal }
     return result
 
-},{})
+}, {})
 
 console.log(convert)
 
@@ -338,8 +338,32 @@ console.log(convert)
 // spread concept in object
 
 const obj3 = {
-    name:'deepanshu',
-    age:27
+    name: 'deepanshu',
+    age: 27
 }
-console.log({...obj3 , 'email':'deep@gmail.com'})
+console.log({ ...obj3, 'email': 'deep@gmail.com' })
 console.log(obj3) // dont change in the original object through spread operation method use......
+
+
+foo()
+
+function foo() {
+    console.log('calling foo')
+}
+
+foo()
+
+
+// closure ==========================
+
+function outer(a, b) {
+    var x = 10;
+   return function inner() {
+        console.log(x + a + b)
+    }
+    
+}
+
+const result = outer(1, 3)
+result()
+// ==================================
