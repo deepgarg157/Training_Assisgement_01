@@ -358,12 +358,49 @@ foo()
 
 function outer(a, b) {
     var x = 10;
-   return function inner() {
+    return function inner() {
         console.log(x + a + b)
     }
-    
+
 }
 
 const result = outer(1, 3)
 result()
 // ==================================
+
+for (var i = 1; i <= 3; i++) {
+    function cal(i) {
+        setTimeout(() => {
+            console.log(i)
+        }, 1000);
+    }
+    cal(i)
+}
+
+// output was 1 2 3 
+
+
+// map, filter, reduce
+
+const array1 = [1, 2, 3, 4, 5]
+
+var resArr = []
+for(let i=0 ; i<array1.length ; i++){
+    resArr.push(array1[i]*2)
+}
+console.log(resArr)
+
+// to over come this logic of for loop we can use map in array to return the updated array
+
+const resArr1 = array1.map((value) => value*2)
+console.log(resArr1)
+
+
+// question
+var a =20
+function foo(){
+    console.log(a)
+    var a = 10
+}
+
+foo()
