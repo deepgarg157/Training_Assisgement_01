@@ -23,3 +23,12 @@ const arr = 'deep'
 const char = arr.split(' ')
 
 console.log(char)
+
+
+function abc(){
+    var a=10
+    console.log(a)
+}
+
+console.log(a)
+abc()
