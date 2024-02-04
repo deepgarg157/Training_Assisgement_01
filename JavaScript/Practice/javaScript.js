@@ -32,3 +32,14 @@ function abc(){
 
 console.log(a)
 abc()
+
+
+console.log(name)
+const name = 'deep' // name is not defined
+
+a=[]
+b=[]
+
+console.log(a === b) // false
+
+console.log(typeof a === typeof b) // true

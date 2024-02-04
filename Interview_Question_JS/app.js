@@ -403,4 +403,35 @@ function foo(){
     var a = 10
 }
 
-foo()
+foo() // undefined
+
+// question
+a=[]
+b=[]
+console.log(a===b) // false
+
+a={}
+b={}
+console.log(a===b) // false
+
+
+const arr4 = [0, 10, 20, 30, 40]
+
+const res = arr4.filter((value) => value < 30)
+console.log(res)
+
+// question
+
+myFun()
+
+var myFun = function(){
+    console.log('first called')
+}
+
+myFun()
+
+function myFun(){
+    console.log('second called')
+}
+
+myFun()
