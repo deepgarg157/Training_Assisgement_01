@@ -385,20 +385,20 @@ for (var i = 1; i <= 3; i++) {
 const array1 = [1, 2, 3, 4, 5]
 
 var resArr = []
-for(let i=0 ; i<array1.length ; i++){
-    resArr.push(array1[i]*2)
+for (let i = 0; i < array1.length; i++) {
+    resArr.push(array1[i] * 2)
 }
 console.log(resArr)
 
 // to over come this logic of for loop we can use map in array to return the updated array
 
-const resArr1 = array1.map((value) => value*2)
+const resArr1 = array1.map((value) => value * 2)
 console.log(resArr1)
 
 
 // question
-var a =20
-function foo(){
+var a = 20
+function foo() {
     console.log(a)
     var a = 10
 }
@@ -406,13 +406,13 @@ function foo(){
 foo() // undefined
 
 // question
-a=[]
-b=[]
-console.log(a===b) // false
+a = []
+b = []
+console.log(a === b) // false
 
-a={}
-b={}
-console.log(a===b) // false
+a = {}
+b = {}
+console.log(a === b) // false
 
 
 const arr4 = [0, 10, 20, 30, 40]
@@ -424,21 +424,49 @@ console.log(res)
 
 myFun()
 
-var myFun = function(){
+var myFun = function () {
     console.log('first called')
 }
 
 myFun()
 
-function myFun(){
+function myFun() {
     console.log('second called')
 }
 
 myFun()
 
+// ==================
 var a = 10
 {
-    var a=20
+    var a = 20
 }
 
 console.log(a)
+// ==================
+
+// ==================
+function outer() {
+    function inner() {
+        console.log(x)
+    }
+    const x = 10
+    return inner
+}
+
+const inner = outer()
+inner()
+
+// output = 10
+// ==================
+
+// ==================
+for(var i=0; i<3; i++){
+    function value(i){
+        setTimeout(() => {
+            console.log(i)
+        }, i*1000);
+    }
+    value(i)
+}
+// ==================
