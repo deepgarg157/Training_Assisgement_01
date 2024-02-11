@@ -470,3 +470,35 @@ for(var i=0; i<3; i++){
     value(i)
 }
 // ==================
+
+// ==================
+function foo(){
+    return new Promise((resolve, reject) =>{
+        reject('hello world')
+    }) 
+ 
+}
+
+async function res(){
+    try {
+        const res = await foo()
+        console.log(res)
+    } catch (error) {
+        console.log(error)
+    }
+  
+}
+
+res()
+// ==================
+
+function outer(){
+    
+    inner()
+    console.log(x)
+    function inner(){
+        var x=5
+    }
+}
+
+outer()
