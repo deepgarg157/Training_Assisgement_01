@@ -502,3 +502,29 @@ function outer(){
 }
 
 outer()
+
+
+//  ===================
+async function foo(){
+    return 'hello world'
+}
+
+async function abc(){
+    const result2 = await foo()
+    console.log(result2)
+}
+
+abc()
+//  ===================
+
+// ====================
+const str2 = 'i am deepanshu'
+const newStr = str2.split(' ')
+
+const newStr2 = newStr.map((char, i) => {
+    return char[0].toUpperCase() + char.slice(1)
+})
+
+console.log(newStr2)
+// ====================
+
